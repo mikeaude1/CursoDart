@@ -3,10 +3,17 @@ import 'dart:io';
 main() {
   String continuar = 'y';
   int contador = 0;
-  while (continuar == 'y' || continuar == 'Y') {
+  // while (continuar == 'y' || continuar == 'Y') {
+  //   contador++;
+  //   stdout.writeln('Desea continuar? (y/n)');
+  //   continuar = stdin.readLineSync() ?? 'n';
+  //   print('Este codigo se ah ejecutado $contador veces');
+  // }
+
+  do {
     contador++;
     stdout.writeln('Desea continuar? (y/n)');
     continuar = stdin.readLineSync() ?? 'n';
     print('Este codigo se ah ejecutado $contador veces');
-  }
+  } while (continuar == 'y' || continuar == 'Y');
 }
