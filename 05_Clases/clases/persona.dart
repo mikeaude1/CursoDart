@@ -20,12 +20,28 @@ class Persona {
   set domicilio(String domicilio) => this._domicilio = domicilio;
 
   //constructore el constructor por defecto debe tener el mismo nombre de la clase
-  Persona() {
-    print('Constructor por defecto');
+  // Persona(int edad, String nombre) {
+  //   this.edad = edad;
+  //   this.nombre = nombre;
+  //   print('Constructor con parametros');
+  //   print('Constructor por defecto');
+  //   _domicilio = 'Hola desde el constructor por defecto';
+  // }
+
+  //edad es obligatorio y nombre es opcional
+  // Persona(this.edad, {this.nombre}) {}
+
+  //edad es obligatorio y nombre es opcional
+  //si no se le pasa el nombre, se le asigna 'Maria'
+  Persona({required this.edad, this.nombre = 'Maria'}) {}
+
+  //constructor con nombre
+  Persona.persona30({this.nombre}) {
+    this.edad = 30;
   }
 
   @override
   String toString() {
-    return 'Persona{nombre: $nombre, edad: $edad, bio: $bio, domicilio: $_domicilio}';
+    return 'Persona{nombre: $nombre, edad: $edad, domicilio: $_domicilio}';
   }
 }
