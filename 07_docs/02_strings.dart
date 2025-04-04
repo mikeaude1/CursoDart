@@ -18,4 +18,12 @@ void main(List<String> args) {
   print('Operador *: ${nombreCompleto * 3}');
   print('ReplaceAll: ${nombreCompleto.replaceAll('e', '*')}');
   print('Substring: ${nombreCompleto.substring(0, 5)}...');
+  print('indexOf F: ${nombreCompleto.indexOf('F')}'); // juan
+
+  print('Split: ${nombreCompleto.split(' ')}'); // Juan Perez
+  print('Split: ----${nombreCompleto.split(' ')[1]}----');
+
+  print(
+    'Capitalizar: ${nombreCompleto[nombreCompleto.length - 1].toUpperCase()}',
+  );
 }
